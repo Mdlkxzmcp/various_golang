@@ -7,10 +7,24 @@ import (
 )
 
 func main() {
-	if len(os.Args) > 1 {
-		fmt.Println(os.Args[1])
+	var args []string 							//manual type declaration   1/2
+    args = os.Args								// -||- 				    2/2
+	hourOfDay := time.Now().Hour()				//type inference
+	greeting := getGreeting(hourOfDay)
+
+	if len(args) > 1 {
+		fmt.Println(args[1])
 	} else {
-		fmt.Println("Hello, world\n")
-		fmt.Println("The current time is: ", time.Now())
+		fmt.Println(greeting)
+	}
+}
+
+func getGreeting(hour int) string {
+	if hour < 12 {
+		return "Good Morning Sweetheart"
+	} else if hour < 18 {
+		return "Splendid Afternoon You Beautiful Being"
+	} else {
+		return "Dark Evening Your Vampiresy"
 	}
 }
