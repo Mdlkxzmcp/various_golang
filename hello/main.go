@@ -24,6 +24,7 @@ func main() {
 		} else {
 			i := 0
 			isLessThanSix := true
+
 			for isLessThanSix {
 				if i >= 6 {
 					isLessThanSix = false
