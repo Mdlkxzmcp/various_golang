@@ -40,16 +40,22 @@ func main() {
 }
 
 func getGreeting(hour int) (string, error) {
+	var greeting [4]string
+	greeting[0] = "Khhhhh!! Go back to sleep! Programs also need some rest"
+	greeting[1] = "Good Morning Sweetheart"
+	greeting[2] = "Splendid Afternoon You Beautiful Being"
+	greeting[3] = "Dark Evening Your Vampiresy"
 	var message string
+
 	if hour < 4 {
-		err := errors.New("Khhhhh!! Go back to sleep! Programs also need some rest")
+		err := errors.New(greeting[0])
 		return message, err
 	} else if hour < 7 {
-		message = "Good Morning Sweetheart"
+		message = greeting[1]
 	} else if hour < 16 {
-		message = "Splendid Afternoon You Beautiful Being"
+		message = greeting[2]
 	} else {
-		message = "Dark Evening Your Vampiresy"
+		message = greeting[3]
 	}
 	return message, nil
 }
