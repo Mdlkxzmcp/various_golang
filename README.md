@@ -3,7 +3,7 @@ Weekend fun with Go
 
 
 
-##Some of my after notes:
+## Some of my after notes:
 
 + Creating executables for not only the currently used but also other OS's with such an ease is amazing!
 
